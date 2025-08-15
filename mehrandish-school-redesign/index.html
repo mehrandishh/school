@@ -131,6 +131,11 @@
     background-repeat: no-repeat; /* تکرار نکن */
     background-attachment: fixed;
 }
+        @media (max-width: 768px) {
+    #home {
+        background-attachment: scroll; /* غیرفعال کردن fixed در موبایل */
+    }
+}
     </style>
 </head>
 <body  class="bg-amber-50 text-gray-900 overflow-x-hidden">
