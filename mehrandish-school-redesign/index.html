@@ -129,11 +129,14 @@
     background-size: cover;       /* کل بخش رو پوشش بده */
     background-position: center;  /* وسط‌چین کن */
     background-repeat: no-repeat; /* تکرار نکن */
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
-        @media (max-width: 768px) {
+/* media query برای موبایل (صفحه‌های کوچکتر از 768px) */
+@media (max-width: 768px) {
     #home {
-        background-attachment: scroll; /* غیرفعال کردن fixed در موبایل */
+        background-attachment: scroll;  /* مطمئن شید fixed نباشه */
+        background-size: contain;       /* اگر cover هنوز بزرگ نشون می‌ده، contain امتحان کنید تا کل تصویر فیت بشه بدون برش زیاد */
+        min-height: 100vh;              /* مطمئن شید کل صفحه موبایل رو پوشش می‌ده */
     }
 }
     </style>
